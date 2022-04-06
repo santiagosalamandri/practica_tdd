@@ -27,6 +27,13 @@ module.exports = class elements {
            return null;  
     }
     delete(key){
-        return 0;
+        for (let i = 0; i < this.#elements.length; i++) {
+            const element = this.#elements[i];
+            if(element.key==key){
+                console.log("FOUND!")
+                this.#elements.splice(element,1);
+                return;
+            }
+        }
     }
 }
