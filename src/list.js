@@ -12,7 +12,6 @@ module.exports = class elements {
             }
         }
         this.#elements.push({"key":key,"value":value});
-
     }
     count() {
         return this.#elements.length;
