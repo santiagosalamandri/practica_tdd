@@ -77,8 +77,9 @@ describe("getting an ordered list", function () {
     })  
     it("from non empty unordered list, return ordered list", function () {
         var list = new List();
-        var orderedList=[{key:"a",value:"value2"},{key:"b",value:"value"}];
+        var orderedList=[{key:"a",value:"value2"},{key:"b",value:"value"},{key:"c",value:"value2"}];
         list.add("b","value");
+        list.add("c","value2");
         list.add("a","value2");
 
         assert.deepEqual(list.getOrderedList(),orderedList);
