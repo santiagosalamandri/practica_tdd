@@ -19,5 +19,11 @@ describe("Key-value pair list", function () {
             list.add("key","value");
             assert.equal(list.count(), 1);
         })
+        it("returns the value added", function () {
+            var list = new List();
+            list.add("key","value");
+            key="key";
+            assert.equal(list.find(key),"value");
+        })
     })
 });
