@@ -26,7 +26,7 @@ describe("Key-value pair list", function () {
             assert.equal(list.find(key),"value");
         })
     })        
-    describe("when add a key is in the list", function () {
+    describe("adding a key is in the list", function () {
             it("updates the value", function () {
                 var list = new List();
                 list.add("key","value");
@@ -36,4 +36,21 @@ describe("Key-value pair list", function () {
                 assert.equal(list.find(key),"newValue");
             })    
     })
+    describe("adding a second different key", function () {
+        it("updates the count to 2", function () {
+            var list = new List();
+            list.add("key","value");
+            list.add("key2","value2");
+
+            assert.equal(list.count("key"),2);
+        })
+    }) 
+        describe("deleting a key", function () {
+            it("in an empty list, count is zero", function () {
+                var list = new List();
+                list.delete(key);    
+                assert.equal(list.count("key"),0);
+            })         
+})
+
 });
