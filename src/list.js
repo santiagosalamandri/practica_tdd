@@ -1,19 +1,29 @@
-module.exports = class List {
-    #quantity
+module.exports = class elements {
+    #elements;
     constructor() {
-        this.#quantity = 0;
+        this.#elements=[];
     }
     add(key, value) {
-        this.#quantity += 1;
+        for (let i = 0; i < this.#elements.length; i++) {
+            const element = this.#elements[i];
+            if(element.key==key){
+                element.value=value;
+                return;
+            }
+        }
+        this.#elements.push({"key":key,"value":value});
+
     }
     count() {
-        return this.#quantity;
+        return this.#elements.length;
     }
     find(key) {
-        if (this.#quantity == 0) {
-             return null; }
-        else {
-            return "value";
+        for (let i = 0; i < this.#elements.length; i++) {
+            const element = this.#elements[i];
+            if(element.key==key){
+                return element.value;
+            }
         }
+           return null;  
     }
 }
