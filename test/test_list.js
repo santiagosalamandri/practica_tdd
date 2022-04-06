@@ -50,6 +50,14 @@ describe("Key-value pair list", function () {
                 var list = new List();
                 list.delete(key);    
                 assert.equal(list.count("key"),0);
+            }) 
+            it("that exists in the list, count decreasess by one", function () {
+                var list = new List();
+                list.add("key","value");
+                list.add("key2","value2");
+
+                list.delete("key");    
+                assert.equal(list.count("key"),1);
             })         
 })
 
