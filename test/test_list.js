@@ -25,5 +25,15 @@ describe("Key-value pair list", function () {
             key="key";
             assert.equal(list.find(key),"value");
         })
+    })        
+    describe("when add a key is in the list", function () {
+            it("updates the value", function () {
+                var list = new List();
+                list.add("key","value");
+                key="key";
+                list.add("key","newValue");
+
+                assert.equal(list.find(key),"newValue");
+            })    
     })
 });
