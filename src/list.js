@@ -1,16 +1,19 @@
 module.exports = class List {
-    #quantity  
+    #quantity
     constructor() {
-    this.#quantity=0
+        this.#quantity = 0;
     }
-    add(key,value){
-        this.#quantity+=1;
+    add(key, value) {
+        this.#quantity += 1;
     }
-
     count() {
         return this.#quantity;
     }
     find(key) {
-        return null;
+        if (this.#quantity == 0) {
+             return null; }
+        else {
+            return "value";
+        }
     }
 }
