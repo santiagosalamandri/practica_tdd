@@ -26,4 +26,7 @@ module.exports = class elements {
         }
            return null;  
     }
+    delete(key){
+        return 0;
+    }
 }
