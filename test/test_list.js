@@ -1,6 +1,6 @@
 const {assert}=require("chai")
-const expect=require("chai").requiere
-
+const expect=require("chai").expect
+const List=require("../src/list.js")
 describe("Key-value pair list",function() {
     it("An empty list returns zero elements",function() {
         var list= new List();
