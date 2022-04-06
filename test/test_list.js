@@ -64,9 +64,16 @@ describe("getting an ordered list", function () {
     it("from an empty list, return empty list", function () {
         var list = new List();
         var orderedList=[];
-        orderedList=list.getOrderedList();    
-        assert.equal(orderedList,[]);
+            
+        assert.deepEqual(list.getOrderedList(),orderedList);
     }) 
-        
+    it("from non empty ordered list, return ordered list", function () {
+        var list = new List();
+        var orderedList=[{key:"a",value:"value2"},{key:"b",value:"value"}];
+        list.add("a","value2");
+        list.add("b","value");
+
+        assert.deepEqual(list.getOrderedList(),orderedList);
+    })  
 })
 });

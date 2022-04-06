@@ -36,4 +36,8 @@ module.exports = class elements {
             }
         }
     }
+    getOrderedList(){
+        console.log(this.#elements);
+        return this.#elements;
+    }
 }
