@@ -60,5 +60,13 @@ describe("Key-value pair list", function () {
                 assert.equal(list.count("key"),1);
             })         
 })
-
+describe("getting an ordered list", function () {
+    it("from an empty list, return empty list", function () {
+        var list = new List();
+        var orderedList=[];
+        orderedList=list.getOrderedList();    
+        assert.equal(orderedList,[]);
+    }) 
+        
+})
 });
