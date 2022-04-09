@@ -31,3 +31,16 @@ Se deben implementar los siguientes requerimientos:
     C. Uso de las cadenas de texto de los bloques "describe" e "it" de los códigos de prueba para describir en forma clara el caso de prueba y el aspecto a verificar.
     
     D. Documentación mediante comentarios en el código fuente y en los archivos de pruebas.
+
+    
+
+## Requerimientos del proyecto
+
+- Node.js: v16.14.2
+- NPM: 8.5.0
+    
+Instalacion: ``` npm install ```
+     
+Ejecucion de tests: ``` npm test ```
+
+Ejecucion de covertura de tests: ``` npm run coverage ```
