@@ -3,25 +3,22 @@ const expect = require("chai").expect
 const List = require("../src/list.js")
 describe("Key-value pair list", function () {
     describe("when empty list", function () {
+        var list = new List();
         it("returns zero elements", function () {
-            var list = new List();
             assert.equal(list.count(), 0);
         })
         it("none key is found", function () {
-            var list = new List();
-            var key = "key"
+            var key = "key";
             assert.isNull(list.find(key));
         })
     })
     describe("when add one element", function () {
+        var list = new List();
+        list.add("key", "value");
         it("count returns 1", function () {
-            var list = new List();
-            list.add("key", "value");
             assert.equal(list.count(), 1);
         })
         it("returns the value added", function () {
-            var list = new List();
-            list.add("key", "value");
             key = "key";
             assert.equal(list.find(key), "value");
         })
